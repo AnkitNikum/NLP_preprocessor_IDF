@@ -1,0 +1,11 @@
+The algorithm uses TF - IDF concept ro remove irrelevant statements from content of news.
+
+The Data is split into test and train. The Test Data set is used to train threshold value for sentence. A matrix of TF-IDF will be formed for sentences of each content. The TF-IDF of each sentence is the average of TF IDF value of words present in them.
+ 
+For now the thresold is kept as: min_tf-idf + (max_tf-idf - min_tf-idf)/19
+
+This help in covering range of tf-idfs. If the sentence in test content as tf-idf greater then thresold, then it is retained or else removed.
+
+Thresold selecting method can be improved based on stats of the tf-idf matrix which is a  future work.
+
+The result.csv contains original content, new_conten, removed lines columns
